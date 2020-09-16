@@ -1,4 +1,4 @@
-const { useCLS } = require("sequelize");
+// const { useCLS } = require("sequelize");
 
 $(document).ready(() => {
   // Getting references to our form and inputs
