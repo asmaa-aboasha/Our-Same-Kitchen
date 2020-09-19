@@ -1,6 +1,9 @@
 $(document).ready(() => {
   // Getting references to our form and input
   const signUpForm = $("form.signup");
+  const nameInput = $("input#name-input");
+  const addressInput = $("input#address-input");
+  const phoneInput = $("input#phone-input");
   const emailInput = $("input#email-input");
   const passwordInput = $("input#password-input");
 
@@ -8,23 +11,48 @@ $(document).ready(() => {
   signUpForm.on("submit", event => {
     event.preventDefault();
     const userData = {
+      name: nameInput.val().trim(),
+      address: addressInput.val().trim(),
+      phone: phoneInput.val().trim(),
       email: emailInput.val().trim(),
       password: passwordInput.val().trim()
     };
 
-    if (!userData.email || !userData.password) {
+    if (
+      !userData.name ||
+      !userData.address ||
+      !userData.phone ||
+      !userData.email ||
+      !userData.password
+    ) {
+      $("#alert .msg").text(
+        "All fields are required. No empty fields allowed."
+      );
+      $("#alert").fadeIn(500);
       return;
     }
     // If we have an email and password, run the signUpUser function
-    signUpUser(userData.email, userData.password);
+    signUpUser(
+      userData.name,
+      userData.address,
+      userData.phone,
+      userData.email,
+      userData.password
+    );
+    nameInput.val("");
+    addressInput.val("");
+    phoneInput.val("");
     emailInput.val("");
     passwordInput.val("");
   });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
-  function signUpUser(email, password) {
+  function signUpUser(name, address, phone, email, password) {
     $.post("/api/signup", {
+      name: name,
+      address: address,
+      phone: phone,
       email: email,
       password: password
     })
