@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS kitchen;
+
+CREATE DATABASE kitchen;
