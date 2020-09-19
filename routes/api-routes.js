@@ -50,4 +50,6 @@ module.exports = function(app) {
       });
     }
   });
+
+  // Route for getting some data about selected organization to be used on schedule page
 };
