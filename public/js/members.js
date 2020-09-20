@@ -4,4 +4,7 @@ $(document).ready(() => {
   $.get("/api/user_data").then(data => {
     $(".member-name").text(data.name);
   });
+  $("#donate").on("click", () => {
+    console.log("donate button clicked");
+  });
 });

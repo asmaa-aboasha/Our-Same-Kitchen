@@ -1,0 +1,31 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/logout">
+                Logout
+            </a>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h2>Welcome <span class="member-name"></span></h2>
+        </div>
+        <form class="form-inline">
+            <div class="form-group mb-2">
+                <h3> How many meals would you like to donate?</h3>
+            </div>
+            <br>
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="inputMealCount" class="sr-only"></label>
+                <input type="mealCount" class="form-control" id="inputMealCount" placeholder="Meal count">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        </form>
+    </div>
+    <div class="row">
+        <div class="orgList"></div>
+        <button id="donate" type="submit" class="btn btn-primary mb-2">Donate</button>
+    </div>
+</div>

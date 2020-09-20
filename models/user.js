@@ -20,11 +20,11 @@ module.exports = function(sequelize, DataTypes) {
     // The name cannot be null
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     // The phone cannot be null
     phone: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false
     },
     // The address cannot be null
