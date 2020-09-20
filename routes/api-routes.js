@@ -56,18 +56,4 @@ module.exports = function(app) {
       });
     }
   });
-
-  // Route for getting some data about our user to be used client side
-  app.get("/api/organization/:id", (req, res) => {
-    db.Organization.findOne({
-      where: { id: req.params.id }
-    })
-      .then(result => {
-        res.json(result);
-      })
-      .catch(err => {
-        res.status(401).json(err);
-        console.log(err);
-      });
-  });
 };

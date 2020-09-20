@@ -9,8 +9,6 @@ $(document).ready(() => {
 
   $(".donate").on("click", function() {
     const id = $(this)[0].dataset.id;
-    $.get("/api/organization/" + id).then(orgData => {
-      console.log(orgData);
-    });
+    window.location.replace("/schedule/" + id);
   });
 });
