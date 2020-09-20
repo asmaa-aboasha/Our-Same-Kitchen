@@ -29,7 +29,7 @@ module.exports = function(app) {
     res.render("members");
   });
 
-  app.get("/schedule/:id", (req, res) => {
+  app.get("/schedule/:id", isAuthenticated, (req, res) => {
     // res.sendFile(path.join(__dirname, "../public/members.html"));
     console.log("id" + req.params.id);
     db.Organization.findOne({
@@ -40,7 +40,7 @@ module.exports = function(app) {
         res.render("schedule", result.dataValues);
       })
       .catch(err => {
-        res.status(401).json(err);
+        res.status(500).json(err);
         console.log(err);
       });
   });
