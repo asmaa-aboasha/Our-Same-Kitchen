@@ -8,16 +8,6 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-
-  Meals.associate = function(models) {
-    // We're saying that Meals should belong to a User
-    // A Meal can't be created without a User due to the foreign key constraint
-    Meals.belongsTo(models.User, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
-
+  
   return Meals;
 };
