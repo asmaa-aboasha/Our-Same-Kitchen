@@ -12,20 +12,28 @@
         <div class="col-md-6 col-md-offset-3">
             <h2>Welcome <span class="member-name"></span></h2>
         </div>
-        <form class="form-inline">
+        <form class="form-inline mealInput">
             <div class="form-group mb-2">
                 <h3> How many meals would you like to donate?</h3>
             </div>
             <br>
             <div class="form-group mx-sm-3 mb-2">
-                <label for="inputMealCount" class="sr-only"></label>
+                <label for="inputMealCount1" class="sr-only"></label>
                 <input type="mealCount" class="form-control" id="inputMealCount" placeholder="Meal count">
             </div>
+            <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span> <span class="msg1"></span>
+          </div>
             <button type="submit" class="btn btn-primary mb-2">Submit</button>
         </form>
     </div>
+    <!-- Calendly inline widget begin -->
     <div class="row">
-        <div class="orgList"></div>
-        <button data-id="1" type="submit" class="btn btn-primary mb-2 donate">Donate</button>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/theunitedrhinos/60min"
+            style="min-width:320px;height:630px;">
+        </div>
     </div>
+         <!-- Calendly inline widget end -->
 </div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
