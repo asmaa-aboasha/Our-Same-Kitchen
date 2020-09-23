@@ -9,6 +9,10 @@ $(document).ready(() => {
     $(".member-name").text(data.name);
   });
 
+  $(".impact").on("click", () => {
+    window.location.replace("/impact");
+  });
+
   const mealCountForm = $("form.mealInput");
   const inputMealCount = $("input#inputMealCount");
 
