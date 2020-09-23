@@ -56,4 +56,13 @@ module.exports = function(app) {
       });
     }
   });
+
+  app.get("/api/meal_data", (req, res) => {
+    db.Meals.sum("mealCount").then(sum => {
+      console.log(sum);
+      res.json({
+        total: sum
+      });
+    });
+  });
 };

@@ -7,8 +7,7 @@ $(document).ready(() => {
     $(".member-name").text(data.name);
   });
 
-  $(".donate").on("click", function() {
-    const id = $(this)[0].dataset.id;
-    window.location.replace("/schedule/" + id);
+  $(".impact").on("click", () => {
+    window.location.replace("/impact");
   });
 });
