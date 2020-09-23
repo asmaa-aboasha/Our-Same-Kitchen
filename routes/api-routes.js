@@ -34,6 +34,16 @@ module.exports = function(app) {
       });
   });
 
+  app.post("/api/meal-count", (req, res) => {
+    db.Meals.create({
+      mealCount: req.body.mealCount
+    }).catch(err => {
+      res.status(401).json(err);
+      console.log(err);
+    });
+    console.log(res);
+  });
+
   // Route for logging user out
   app.get("/logout", (req, res) => {
     req.logout();
@@ -50,9 +60,9 @@ module.exports = function(app) {
       // Sending back a password, even a hashed password, isn't a good idea
       console.log(req.user);
       res.json({
+        name: req.user.name,
         email: req.user.email,
-        id: req.user.id,
-        name: req.user.name
+        id: req.user.id
       });
     }
   });
