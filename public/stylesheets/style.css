@@ -1,4 +1,85 @@
+header {
+  letter-spacing: 8px;
+  text-align: center;
+  width: 100%;
+  background-color: #fafafafb;
+  line-height: 50px;
+}
+
+header #company-name {
+  color: rgb(110, 132, 112);
+  font-size: 25px;
+  font-weight: 800;
+}
+
+header #navigation {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0;
+}
+
+.nav-item {
+  display: inline-block;
+  font-size: 12px;
+  padding-right: 10px;
+}
+
+.nav-item a {
+  color: black;
+}
+
+.nav-item a:hover {
+  text-decoration: none;
+  color: rgb(110, 132, 112);
+}
+
+#intro img {
+  max-width: 100%;
+  position: relative;
+}
+
+#greeting {
+  position: absolute;
+  width: 600px;
+  height: auto;
+  right: 180px;
+  top: 120px;
+}
+
+#greeting #attn {
+  color: white;
+  font-size: 80px;
+  font-weight: 800;
+}
+
+#greeting #adjective {
+  margin-bottom: 1px;
+  letter-spacing: 8px;
+  color: white;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+main .section-header {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 8px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#mission {
+  background-color: rgb(110, 132, 112);
+  padding-bottom: 20px;
+  font-size: 15px;
+}
+
 form.signup,
 form.login {
   margin-top: 50px;
+}
+
+@media (max-width: 775px) {
+ #greeting {
+      display: none;
+  }
 }
