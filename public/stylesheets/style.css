@@ -6,10 +6,11 @@ header {
   line-height: 50px;
 }
 
-header #company-name {
+.bold-name {
   color: rgb(110, 132, 112);
   font-size: 25px;
   font-weight: 800;
+  text-align: center;
 }
 
 header #navigation {
@@ -78,8 +79,45 @@ form.login {
   margin-top: 50px;
 }
 
+a {
+  color:rgb(110, 132, 112);
+}
+a:hover {
+  color:black;
+  text-decoration: none;
+}
+
+.btns {
+  background-color: rgb(161, 182, 162);
+}
+
 @media (max-width: 775px) {
- #greeting {
-      display: none;
+  #greeting {
+    display: none;
   }
+  #login-img {
+    display: none;
+  }
+}
+
+/* Login Page */
+#login-img {
+  position: relative;
+  max-width: 100%;
+}
+
+.login-container {
+  position: absolute;
+  width: 400px;
+  left: 50%;
+  margin-left: -200px;
+  top: 50%;
+  margin-top: -200px;
+  background-color: rgba(22, 37, 23, 0.7);
+  color: white;
+  text-align: center;
+}
+
+.login {
+  font-family: 'Montserrat', sans-serif;
 }
