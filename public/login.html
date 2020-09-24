@@ -5,20 +5,26 @@
   <title>Our Same Kitchen</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Link to Bootstrap stylesheet -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- Link to stylesheet -->
   <link href="stylesheets/style.css" rel="stylesheet">
+  <!-- Link to Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono:wght@300&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <div id="company-name">OUR SAME KITCHEN</div>
+    <div class="bold-name"><a href="/">OUR SAME KITCHEN</a></div>
   </header>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Welcome Back</h2>
+  <main>
+    <div>
+      <img id="login-img" src="img/package.jpg" alt="packaging food image" />
+      <div class="container login-container">
         <form class="login">
+          <h2>Welcome Back</h2>
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input type="email" class="form-control" id="email-input" placeholder="Email">
@@ -27,13 +33,13 @@
             <label for="exampleInputPassword1">Password</label>
             <input type="password" class="form-control" id="password-input" placeholder="Password">
           </div>
-          <button type="submit" class="btn btn-default">Login</button>
+          <button type="submit" class="btn btn-default btns">Login</button>
         </form>
         <br />
         <p>Or sign up <a href="/">here</a></p>
       </div>
     </div>
-  </div>
+  </main>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
