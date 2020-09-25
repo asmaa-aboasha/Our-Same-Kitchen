@@ -2,14 +2,12 @@ $(document).ready(() => {
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
   $(".calendly-section").hide();
- 
+
   $.get("/api/user_data").then(data => {
-    console.log("got data from api");
-    console.log(data);
     $(".member-name").text(data.name);
   });
 
-  $(".impact").on("click", () => {
+  $("#impact").on("click", () => {
     window.location.replace("/impact");
   });
 

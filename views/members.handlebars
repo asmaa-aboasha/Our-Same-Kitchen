@@ -1,4 +1,5 @@
 <link href="/stylesheets/members.css" rel="stylesheet">
+
 <header>
     <div class="bold-name">OUR SAME KITCHEN</div>
     <ul id="navigation">
@@ -8,41 +9,27 @@
 
 <div class="container">
     <div class="form-section">
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="greeting">Welcome <span class="member-name"></span></h2>
-            </div>
-            <form class="form-inline mealInput">
-                <div class="col-md-12">
-                    <h3 class="greeting"> How many meals would you like to donate?</h3>
-                </div>
-                <br>
-        </div>
-        <div class="row">
+        <h2 class="greeting">Welcome <span class="member-name"></span></h2>
+        <h3 class="greeting"> How many meals would you like to donate?</h3>
+        <form class="mealInput justify-content-center">
             <div class="form-group">
-                <label for="inputMealCount1" class="sr-only"></label>
                 <input type="mealCount" class="form-control" id="inputMealCount" placeholder="Meal count">
-
                 <div style="display: none" id="alert" class="alert alert-danger" role="alert">
                     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                     <span class="sr-only">Error:</span> <span class="msg1"></span>
                 </div>
-                <button type="submit" class="btn btn-primary mb-2 submit">Submit</button>
             </div>
-            </form>
-        </div>
+            <button type="submit" class="btn btn-primary mb-2 submit">Submit</button>
+        </form>
     </div>
     <!-- Calendly inline widget begin -->
     <div class="calendly-section">
-        <div class="row">
-            <h2 class="bold-question">When would you like your donation to be picked up?</h2>
-            <div class="calendly-inline-widget" data-url="https://calendly.com/theunitedrhinos/60min"
-                style="min-width:320px;height:630px;">
-            </div>
+        <h2 class="question">When would you like your donation to be picked up?</h2>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/theunitedrhinos/60min"
+            style="min-width:320px;height:630px;">
         </div>
-
         <!-- Calendly inline widget end -->
-        <div>
+        <div id="impact-div">
             <button type="submit" class="btn btn-primary mb-2" id="impact">See Your Impact</button>
         </div>
     </div>

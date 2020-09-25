@@ -1,21 +1,20 @@
-
- body {
-    background-color: rgb(110, 132, 112);
-    background-size: auto;
-    font-family: 'Montserrat', sans-serif;
-  }
+body {
+  background-color: rgb(110, 132, 112);
+  background-size: auto;
+  font-family: 'Montserrat', sans-serif;
+}
 
 header {
-    letter-spacing: 8px;
-    text-align: center;
-    width: 100%;
-    background-color: #fafafafb;
-    line-height: 50px;
+  letter-spacing: 8px;
+  text-align: center;
+  width: 100%;
+  background-color: #fafafafb;
+  line-height: 50px;
   }
   
- h2, h3 {
-    text-align: center;
-    color: white;
+h2, h3 {
+  text-align: center;
+  color: white;
   }
 
 /* footer {
@@ -26,35 +25,30 @@ header {
   height: 5rem; 
   } */
 
-  #inputMealCount {
-      width: auto;
-      margin-left: 480px;
-      margin-top: 20px;
-      text-align: center;
-  }
-
-  button.submit.btn.btn-primary.mb-2{
-    margin-left: 540px;
-    background-color: lightgray;
-    border-color: lightgray;
-    color: black;
-    margin-top: 10px;
-  }
-
-  .container {
-      margin-top: 80px;
-  }
-
-  #impact {
-    margin-left: 500px;
-    background-color: lightgray;
-    border-color: lightgray;
-    color: black;
-}
-.bold-question {
-    color: white;
-    font-size: 25px;
-    font-weight: 800;
+#inputMealCount {
     text-align: center;
+  }
+
+button.submit {
+    background-color: lightgray;
+    border-color: lightgray;
+    color: black;
+  }
+
+.container {
+    margin-top: 80px;
+  }
+
+#impact {
+  background-color: lightgray;
+  border-color: lightgray;
+  color: black;
 }
-  
+
+.mealInput {
+  text-align: center;
+}
+
+#impact-div {
+  text-align: center;
+}
