@@ -34,7 +34,7 @@ header #navigation {
   color: rgb(110, 132, 112);
 }
 
-#intro img {
+#intro img, #members-img {
   max-width: 100%;
   position: relative;
 }
@@ -90,6 +90,8 @@ a:hover {
 .btns {
   background-color: rgb(161, 182, 162);
 }
+
+
 
 @media (max-width: 775px) {
   #greeting {

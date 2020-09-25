@@ -1,8 +1,8 @@
 $(document).ready(() => {
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
-  $(".calendly-inline-widget").hide();
-
+  $(".calendly-section").hide();
+ 
   $.get("/api/user_data").then(data => {
     console.log("got data from api");
     console.log(data);
@@ -33,10 +33,12 @@ $(document).ready(() => {
     $.post("/api/meal-count", {
       mealCount: mealCount
     });
-    // inputMealCount.val("");
-    mealCountForm.hide();
-    $(".calendly-inline-widget").show();
+
+    $(".form-section").hide();
+    // $(".greeting").hide();
+    $(".calendly-section").show();
   }
+
   $(".donate").on("click", function() {
     const id = $(this)[0].dataset.id;
     window.location.replace("/schedule/" + id);
