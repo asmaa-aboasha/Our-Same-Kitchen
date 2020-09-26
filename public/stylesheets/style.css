@@ -55,10 +55,10 @@ header #navigation {
 
 #greeting #adjective {
   margin-bottom: 1px;
-  letter-spacing: 8px;
+  letter-spacing: 6px;
   color: white;
   font-size: 30px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 main .section-header {
