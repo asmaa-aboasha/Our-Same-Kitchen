@@ -1,18 +1,64 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/logout">
-                Logout
-            </a>
+<link href="/stylesheets/impact.css" rel="stylesheet">
+
+<header>
+    <div class="bold-name">OUR SAME KITCHEN</div>
+    <ul id="navigation">
+      <li class="nav-item"><a href="/members">DONATE</a></li>
+      <li class="nav-item"><a href="/logout">LOGOUT</a></li>
+    </ul>
+</header>
+
+<main>
+    <div class="impact-header">
+        <div>YOUR DONATION HAS HELPED US PROVIDE</div> 
+        <div><span id="total">{{object.total}}</span> MEALS</div> 
+    </div>
+    <div class="benefits-header">
+        <div>BENEFITS OF OUR SAME KITCHEN</div>
+        <hr>
+    </div>
+    <div class="card-deck">
+        <div class="card">
+            <div class="card-img-top">
+                <svg width="5em" height="5em" viewBox="0 0 16 16" class="bi bi-house" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                </svg>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">INCREASED ACCESS</h5>
+                <p class="card-text">Increased access of nutritious food for all.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img-top">
+               <svg width="5em" height="5em" viewBox="0 0 16 16" class="bi bi-truck" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                </svg>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">INCREASED DISTRIBUTION</h5>
+                <p class="card-text">Meals contributed go directly to communities and families in need.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img-top">
+                <svg width="5em" height="5em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                </svg>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">REDUCED WASTE</h5>
+                <p class="card-text">Surplus food is shared with the community, reducing waste.</p>
+            </div>
         </div>
     </div>
-</nav>
-<div class="container">
-    <h2>See Your Impact</h2>
-    <h3 id="total"></h3>
-    <h4>Total number of meals donated so far</h4>
-    {{!-- insert map of markers --}}
-</div>
+    <div class="impact-img">
+        <img src="img/impact.jpg" alt="donation image" />
+    </div>
+    <h1 id="quote">"Never doubt that a small group of thoughtful, committed citizens can change the world. Indeed, it is the only thing that ever has." -Margaret Mead</h1>
+</main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="/js/impact.js"></script>

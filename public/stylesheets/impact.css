@@ -1,0 +1,68 @@
+body {
+  background-color: rgb(110, 132, 112);
+  background-size: auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  letter-spacing: 8px;
+  text-align: center;
+  width: 100%;
+  background-color: #fafafafb;
+  line-height: 50px;
+}
+
+main .impact-header {
+  color: #fafafafb;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 60px;
+  letter-spacing: 2px;
+}
+
+#total {
+  font-size: 70px;
+  letter-spacing: 0px;
+}
+
+.benefits-header {
+  color: #fafafafb;
+  font-size: 22px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin: 50px 30px;
+}
+
+hr {
+  border: 1px solid white;
+}
+
+.card-deck {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: rgb(110, 132, 112);
+  text-align: center;
+}
+
+.card-img-top {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.impact-img {
+  text-align: center;
+  margin-top: 70px;
+}
+
+img {
+  border-radius: 1%;
+}
+
+#quote {
+  color: #fafafafb;
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 50px 120px;
+}
