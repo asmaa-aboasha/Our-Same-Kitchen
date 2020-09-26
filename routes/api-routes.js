@@ -56,7 +56,7 @@ module.exports = function(app) {
       // The user is not logged in, send back an empty object
       res.json({});
     } else {
-      // Otherwise send back the user's email and id
+      // Otherwise send back the user's name, email and id
       // Sending back a password, even a hashed password, isn't a good idea
       console.log(req.user);
       res.json({
@@ -72,18 +72,6 @@ module.exports = function(app) {
       console.log(sum);
       res.json({
         total: sum
-      });
-    });
-  });
-
-  app.get("/api/locations", (req, res) => {
-    db.User.findAll({
-      attributes: ["address"]
-    }).then( (data) => {
-      const addresses = data.map( (item) => { 
-        request(`https://maps.googleapis.com/maps/api/geocode/json?address=${item.dataValues.address}&key=YOUR_API_KEY`,(err, response, body) => {
-          console.log(response)
-        })
       });
     });
   });

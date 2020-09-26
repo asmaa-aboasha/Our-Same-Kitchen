@@ -7,7 +7,7 @@ $(document).ready(() => {
   const emailInput = $("input#email-input");
   const passwordInput = $("input#password-input");
 
-  // When the signup button is clicked, we validate the email and password are not blank
+  // When the signup button is clicked, we validate the fields are not blank
   signUpForm.on("submit", event => {
     event.preventDefault();
     const userData = {
@@ -25,13 +25,11 @@ $(document).ready(() => {
       !userData.email ||
       !userData.password
     ) {
-      $("#alert .msg").text(
-        "All fields are required. No empty fields allowed."
-      );
+      $("#alert .msg").text("No empty fields allowed.");
       $("#alert").fadeIn(500);
       return;
     }
-    // If we have an email and password, run the signUpUser function
+    // If the fields are not blank, run the signUpUser function
     signUpUser(
       userData.name,
       userData.address,
@@ -60,11 +58,13 @@ $(document).ready(() => {
         window.location.replace("/members");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
-      .catch(handleLoginErr);
+      .catch(handleSignupErr);
   }
 
-  function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
+  function handleSignupErr() {
+    $("#alert .msg").text(
+      "This email address is already being used. Please use a different email address or proceed to log in page."
+    );
     $("#alert").fadeIn(500);
   }
 });
