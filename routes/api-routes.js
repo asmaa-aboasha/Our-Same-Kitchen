@@ -75,16 +75,4 @@ module.exports = function(app) {
       });
     });
   });
-
-  app.get("/api/locations", (req, res) => {
-    db.User.findAll({
-      attributes: ["address"]
-    }).then( (data) => {
-      const addresses = data.map( (item) => { 
-        request(`https://maps.googleapis.com/maps/api/geocode/json?address=${item.dataValues.address}&key=YOUR_API_KEY`,(err, response, body) => {
-          console.log(response)
-        })
-      });
-    });
-  });
 };
