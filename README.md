@@ -6,7 +6,9 @@
 
   The Our Same Kitchen App is a web and mobile application allowing food establishments (e.g. restaurants, grocery stores, farms) to easily add and notify our team of surplus food, and when and where to pick it up. The application uses HTML, CSS, Javascript/ES6, Nodejs, Express-Handlebars, Passport, and Sequelize. 
 
-  ![Image of application home page](./public/img/mobile1.png)![Image of application options](./public/img/mobile2.png)
+  ![Image of application home page](./public/img/mobile1.png)
+      
+  ![Image of application options](./public/img/mobile2.png)
 
 
   ## Table of Contents
