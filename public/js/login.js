@@ -35,8 +35,13 @@ $(document).ready(() => {
         window.location.replace("/members");
         // If there's an error, log the error
       })
-      .catch(err => {
-        console.log(err);
-      });
+      .catch(handleLoginErr);
+  }
+
+  function handleLoginErr() {
+    $("#alert .msg").text(
+      "There is no user associated with this email address. Please sign up."
+    );
+    $("#alert").fadeIn(500);
   }
 });

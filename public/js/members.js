@@ -33,7 +33,6 @@ $(document).ready(() => {
     });
 
     $(".form-section").hide();
-    // $(".greeting").hide();
     $(".calendly-section").show();
   }
 
